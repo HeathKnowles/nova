@@ -31,10 +31,10 @@ export default function Hero() {
             className="flex items-center gap-3 px-6 py-3 bg-gray-900 text-white text-sm font-medium uppercase rounded-full hover:bg-gray-800 transition-colors"
           >
             <Image
-              src="/images/dating.svg"
+              src="/icons/dating.svg"
               alt="Modern Dating"
-              width={28}
-              height={28}
+              width={16}
+              height={16}
             />
             Modern Dating
           </Link>
@@ -45,10 +45,10 @@ export default function Hero() {
             className="flex items-center gap-3 px-6 py-3 bg-white text-gray-900 text-sm font-medium uppercase rounded-full border border-gray-300 hover:border-gray-400 transition-colors"
           >
             <Image
-              src="/images/personal.svg"
+              src="/icons/personal.svg"
               alt="Personal Conversations"
-              width={28}
-              height={28}
+              width={16}
+              height={16}
             />
             Personal Conversations
           </Link>
@@ -59,10 +59,10 @@ export default function Hero() {
             className="flex items-center gap-3 px-6 py-3 bg-white text-gray-900 text-sm font-medium uppercase rounded-full border border-gray-300 hover:border-gray-400 transition-colors"
           >
             <Image
-              src="/images/family.svg"
+              src="/icons/family.svg"
               alt="Friends and Family"
-              width={28}
-              height={28}
+              width={16}
+              height={16}
             />
             Friends & Family
           </Link>
@@ -73,10 +73,10 @@ export default function Hero() {
             className="flex items-center gap-3 px-6 py-3 bg-white text-gray-900 text-sm font-medium uppercase rounded-full border border-gray-300 hover:border-gray-400 transition-colors"
           >
             <Image
-              src="/images/work.svg"
+              src="/icons/work.svg"
               alt="Work Communication"
-              width={28}
-              height={28}
+              width={16}
+              height={16}
             />
             Work & Communication
           </Link>
