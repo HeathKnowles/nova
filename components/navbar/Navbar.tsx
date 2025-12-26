@@ -4,12 +4,12 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useNavbar } from './context'
-
+import { ChevronDown } from 'lucide-react'
 const NAV_LINKS = [
-  { href: '/', label: 'Home' },
-  { href: '/security', label: 'Security' },
+  { href: '/product', label: 'Products', hasDrop: true },
+  { href: '/dev', label: 'Developers', hasDrop: true },
   { href: '/pricing', label: 'Pricing' },
-  { href: '/roadmap', label: 'Roadmap' },
+  { href: '/blog', label: 'Blog' },
 ]
 
 export default function Navbar() {
@@ -20,7 +20,7 @@ export default function Navbar() {
   const safeButtons = buttons.slice(0, 2)
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur border-b border-gray-100">
+    <header className="sticky top-0 z-50 w-full bg-[#F9EDE7] backdrop-blur border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
 
@@ -36,6 +36,9 @@ export default function Navbar() {
                 className="text-gray-600 hover:text-purple-600 text-sm"
               >
                 {l.label}
+                {l.hasDrop && 
+                <ChevronDown size={16} 
+                className="inline ml-1" />}
               </Link>
             ))}
           </nav>
@@ -61,7 +64,6 @@ export default function Navbar() {
       </div>
     </header>
   )
-}
 
 function NavbarButton({
   href,
@@ -70,22 +72,40 @@ function NavbarButton({
 }: {
   href: string
   label: string
-  variant: 'link' | 'primary'
+  variant: 'dark' | 'glass' | 'link'
 }) {
-  if (variant === 'link') {
+  const base =
+    'text-sm px-4 py-2 rounded-full border border-gray-300 transition'
+  if (variant === 'link') 
+    { 
+        return ( 
+        <Link href={href} className="text-sm text-gray-600 hover:text-gray-900"> 
+            {label} 
+        </Link> 
+        ) 
+    }
+  if (variant === 'glass') {
     return (
-      <Link href={href} className="text-sm text-gray-600 hover:text-gray-900">
+      <Link
+        href={href}
+        className={`${base} bg-[#10101054] text-gray-700
+                    hover:border-gray-900 hover:text-gray-900`}
+      >
         {label}
       </Link>
     )
   }
 
+  // dark
   return (
     <Link
       href={href}
-      className="bg-gray-900 text-white px-4 py-2 rounded-full text-sm"
+      className={`${base} bg-[#171717] text-white
+                  hover:border-gray-900 hover:text-gray-100`}
     >
       {label}
     </Link>
   )
+}
+
 }

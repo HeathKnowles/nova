@@ -1,27 +1,29 @@
+import Image from "next/image"
+
 const features = [
   {
-    icon: '📊',
-    color: 'bg-pink-200',
-    title: 'How We Build Nova',
-    description: 'Combining psychology, linguistics, and AI research',
+    icon: '/icons/tonemodel.svg',
+    title: 'Tone Clarity Model',
+    alt: 'tone clarity',
+    description: 'Detects emotional tone and suggests healthier phrasing.',
   },
   {
-    icon: '🔬',
-    color: 'bg-blue-200',
-    title: 'Rigorous Research Model',
-    description: 'Evidence-based communication frameworks',
+    icon: '/icons/respectmodel.svg',
+    title: 'Respect and Boundary Model',
+    alt: 'Repect and Boundaries',
+    description: 'Identifies risky patterns and guides safer responses',
   },
   {
-    icon: '🎯',
-    color: 'bg-purple-200',
-    title: 'World-Class Working At Scale',
-    description: 'Tested across millions of conversations',
+    icon: '/icons/intentmodel.svg',
+    title: 'Intent Understanding Model',
+    alt: 'Intent Understanding',
+    description: 'Helps communicate what you truly mean, not what gets  typed in the moment',
   },
   {
-    icon: '🧠',
-    color: 'bg-purple-300',
+    icon: '/icons/safetyengine.svg',
     title: 'Conversation Safety Engine',
-    description: 'Protecting emotional wellbeing in every interaction',
+    alt: 'Conversations',
+    description: 'Reduces conflicts, misunderstandings and emotional harm.',
   },
 ]
 
@@ -44,11 +46,12 @@ export default function ResearchModel() {
               key={feature.title}
               className="flex items-center gap-4 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors group"
             >
-              <div
-                className={`w-12 h-12 ${feature.color} rounded-lg flex items-center justify-center shrink-0 text-2xl`}
-              >
-                {feature.icon}
-              </div>
+             <Image
+             src={feature.icon}
+             alt={feature.alt}
+             width={64}
+             height={64}
+             />
 
               <div className="flex-1">
                 <h3 className="text-sm font-semibold text-gray-900 mb-1">

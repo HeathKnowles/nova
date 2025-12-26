@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -54,16 +55,24 @@ export default function Hero() {
         </div>
 
         {/* Demo / Placeholder UI */}
-        <div className="max-w-md mx-auto bg-white rounded-2xl shadow-lg p-8 relative">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-2 h-2 bg-yellow-400 rounded-full" />
-            <span className="text-sm text-gray-500">Hi</span>
-          </div>
-
-          <div className="flex justify-end">
-            <div className="bg-green-500 w-8 h-8 rounded-lg" />
-          </div>
+        <div className="max-w-md mx-auto">
+  {/* Outer border + shadow */}
+      <div className="rounded-2xl border border-gray-200 shadow-lg p-8 bg-linear-to-b from-[#F9EDE7] to-[#E5E3E3]">
+        
+        {/* Inner card */}
+        <div className="rounded-md bg-white p-10">
+          <Image
+            src="/images/chatscript.gif"
+            alt="ChatScript"
+            width={450}
+            height={450}
+            className="w-full h-auto rounded-md"
+          />
         </div>
+
+      </div>
+    </div>
+
       </div>
     </section>
   )

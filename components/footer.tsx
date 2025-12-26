@@ -96,7 +96,7 @@ export default function Footer() {
             <Image src="/icons/linkedin.svg" alt="LinkedIn" width={20} height={20} />
           </SocialIcon>
             </div>
-                <div className="flex flex-col md:flex-row items-start md:items-center gap-4 text-sm text-gray-600 md:justify-end">
+                <div className="flex flex-col -mt-6.25 md:flex-row items-start md:items-center gap-4 text-sm text-gray-600 md:justify-end">
                 <Link href="/terms" className="hover:text-gray-900">
                 TERMS OF USE
                 </Link>

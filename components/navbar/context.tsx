@@ -5,7 +5,7 @@ import { createContext, useContext, useState } from 'react'
 export type NavbarButton = {
   href: string
   label: string
-  variant: 'link' | 'primary'
+  variant: 'dark' | 'glass' | 'link'
 }
 
 type NavbarContextType = {
