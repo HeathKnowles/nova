@@ -44,12 +44,12 @@ export default function Navbar() {
                 <Link
                   key={l.href}
                   href={l.href}
-                  className="text-sm text-gray-600 hover:text-purple-600 transition"
+                  className="flex items-center gap-1 text-sm text-gray-600 hover:text-purple-600 transition"
                 >
-                  {l.label}
+                  <span>{l.label}</span>
                   {l.hasDrop && (
                     <ChevronDown 
-                    className="ml-1 h-4 w-4 text-gray-500" />
+                    className="h-4 w-4 text-gray-500" />
                   )}
                 </Link>
               ))}
