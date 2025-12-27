@@ -7,9 +7,10 @@ export default function Hero() {
       <div className="max-w-4xl mx-auto text-center">
 
         {/* Headline */}
-        <h1 className="text-[48px] sm:text-[36px] font-light text-[#6D4C71] mb-6 leading-tight">
+        <h1 className="font-light text-[#6D4C71] mb-6 leading-tight
+            text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
           Communication.
-          <br className="hidden md:block" />
+          <br className="hidden sm:block" />
           Finally done right.
         </h1>
 
